@@ -1,0 +1,17 @@
+body, h1, h2, h3, h4, p, a {
+  margin: 0;
+  font-size: 100%; font-weight: normal;
+}
+
+* { 
+  box-sizing: border-box;
+}
+
+.body {
+  background: #1D8B77;
+}
+
+.table {
+  display: flex;
+  background: #1D8B77;
+}

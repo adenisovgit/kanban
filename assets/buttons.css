@@ -1,0 +1,74 @@
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button_grey {
+  width: 256px;
+  height: 32px;
+}
+
+.button_grey:hover {
+  background: #C4C4C4;
+  border-radius: 3px;
+}
+
+.button_grey:focus {
+  outline:none;
+  box-shadow:none;
+}
+
+.button_cancel {
+  width: 110px;
+  margin-left: 10px;
+}
+
+.button_grey_text {
+  position: relative;
+  width: 205px;
+  height: 18px;
+  padding-left: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+  color: #626262;
+}
+
+.button_grey_icon {
+  position: absolute;
+  top: 1px;
+  left: -5px;
+  width: 16px;
+  height: 16px;
+  margin-right: 13px;
+}
+
+.button_blue {
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 32px;
+  background: #0C7CD5;
+  border-radius: 3px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+
+.button_blue:hover {
+  background: navy;
+}
+
+.button_blue:focus {
+  outline:none;
+  box-shadow:none;
+}

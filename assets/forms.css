@@ -1,0 +1,15 @@
+.form_textbox {
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  width: 276px;
+  height: 52px;
+  resize: none;
+  /* identical to box height */
+  color: #212934;
+}

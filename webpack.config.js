@@ -1,20 +1,18 @@
-
 // @ts-check
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 
 module.exports = () => {
   const config = {
     mode: 'development',
     entry: [
-      `${__dirname}/src/front/index.js`,
+      `${__dirname}/src/index.js`,
     ],
     resolve: {
       extensions: ['.js', '.jsx'],
     },
     output: {
-      path: `${__dirname}/front`,
+      path: `${__dirname}/dest`,
     },
     module: {
       rules: [
@@ -26,7 +24,7 @@ module.exports = () => {
           ],
         },
         {
-          test: /\.html/,
+          test: /\.(jpe?g|png)/,
           loader: 'raw-loader',
         },
         {
@@ -43,7 +41,7 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: `${__dirname}/src/front/assets/index.html`,
+        template: `${__dirname}/assets/index.html`,
       }),
     ],
 

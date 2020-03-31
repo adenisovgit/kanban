@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 
-export default combineReducers({
+import tasksReducer, { actions as tasksActions } from '../features/tasksSlice';
 
+export default combineReducers({
+  tasks: tasksReducer,
 });
 
 
 export const actions = {
-
+  ...tasksActions,
 };

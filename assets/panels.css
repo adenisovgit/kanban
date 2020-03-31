@@ -1,0 +1,18 @@
+.panel {
+  margin: 12px;
+  padding: 12px;
+  width: 300px;
+  height: fit-content;
+  background: #D4D4D4;
+  border-radius: 5px;
+}
+
+.panel_title {
+  margin-bottom: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #404B5A;
+}

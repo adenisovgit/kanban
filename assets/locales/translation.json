@@ -3,9 +3,21 @@
     "translation": {
       "cancel": "Cancel",
       "no": "No",
-      "yes": "Yes"
+      "yes": "Yes",
+      "titleinwork": "In work"
     }
   },
   "ru": {
+    "translation": {
+      "cancel": "Отмена",
+      "no": "Нет",
+      "yes": "Да",
+      "titleinwork": "В работе",
+      "titlecheсking": "На проверке",
+      "titledone": "Выполнено",
+      "addcard": "Добавить еще одну карточку",
+      "entercardtext": "Введите текст карточки",
+      "addcardsubmit": "Добавить карточку"
+    }
   }
 }

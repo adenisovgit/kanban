@@ -18,7 +18,7 @@ export default () => {
   });
 
 
-  document.title = 'React/Redux boilerplate';
+  document.title = 'Kanban board';
   render(
     <Provider store={store}>
       <App />
