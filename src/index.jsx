@@ -12,7 +12,7 @@ import './i18n';
 export default () => {
   const store = configureStore({
     reducer: reducers,
-    middleware: [...getDefaultMiddleware(), logger],
+    middleware: [...getDefaultMiddleware(), /* logger */],
     // preloadedState: {
     // },
   });

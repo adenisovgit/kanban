@@ -9,9 +9,20 @@ body, h1, h2, h3, h4, p, a {
 
 .body {
   background: #1D8B77;
+  padding-top: 36px;
+  padding-left: 24px;
 }
 
 .table {
   display: flex;
   background: #1D8B77;
+}
+
+.page_mask {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }

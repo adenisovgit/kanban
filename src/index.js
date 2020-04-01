@@ -1,4 +1,4 @@
-import '../assets/application.scss';
+import '../assets/css/application.scss';
 
 import run from './index.jsx';
 

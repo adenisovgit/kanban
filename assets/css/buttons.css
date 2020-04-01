@@ -72,3 +72,11 @@ button {
   outline:none;
   box-shadow:none;
 }
+
+.button_cancel_modal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 14px;
+  margin-left: 14px;
+}
