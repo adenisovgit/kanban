@@ -15,7 +15,13 @@ const Panel = (props) => {
   return (
     <div className="panel">
       <div className="panel_title">{panelTitle}</div>
-      {cards.map((card) => <Card key={card.id} text={card.title} />)}
+      {cards.map((card) => (
+        <Card
+          key={card.id}
+          card={card}
+          updateTask={((task) => dispatch(tasksActions.updateTask(task)))}
+        />
+      ))}
 
       {isAddingCard ? (
         <TextForm

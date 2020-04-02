@@ -75,8 +75,9 @@ button {
 
 .button_cancel_modal {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 9px;
+  right: 9px;
   width: 14px;
+  height: 14px;
   margin-left: 14px;
 }
