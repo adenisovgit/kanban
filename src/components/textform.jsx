@@ -34,7 +34,7 @@ const TextForm = (props) => {
       </button>
       <button type="button" className="button_grey button_cancel" onClick={handleCancel}>
         <span className="button_grey_text">
-          <img className="button_grey_icon" src="assets/cross_cancel.png" alt="" />
+          <img className="button_grey_icon" src="/assets/cross_cancel.png" alt="" />
           {t('cancel')}
         </span>
       </button>

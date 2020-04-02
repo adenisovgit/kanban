@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
@@ -19,14 +21,15 @@ const Modal = (props) => {
     setChangingTitle(true);
   };
 
+  const handleClick = (e) => e.stopPropagation();
 
   return (
     <>
       <div className="page_mask" />
-      <div className="modal">
+      <div className="modal" onClick={handleClick}>
         <form className="" onSubmit={handleSubmit(onSubmit)}>
           <button type="button" className="button_cancel_modal" onClick={closeModal}>
-            <img className="" src="assets/cross_cancel.png" alt="" />
+            <img className="" src="/assets/cross_cancel.png" alt="" />
           </button>
 
           <textarea

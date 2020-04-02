@@ -9,7 +9,7 @@ const AddTaskButton = (props) => {
   return (
     <button type="button" className="button_grey" onClick={setState}>
       <span className="button_grey_text">
-        <img className="button_grey_icon" src="assets/cross_plus.png" alt="" />
+        <img className="button_grey_icon" src="/assets/cross_plus.png" alt="" />
         {t('addcard')}
       </span>
     </button>
