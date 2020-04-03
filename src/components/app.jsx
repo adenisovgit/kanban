@@ -2,7 +2,6 @@ import React from 'react';
 import { withTranslation } from 'react-i18next';
 import { DragDropContext } from 'react-beautiful-dnd';
 
-
 import connect from '../connect';
 import Panel from './panel';
 
@@ -13,13 +12,16 @@ const mapStateToProps = ({ tasks }) => ({ tasks });
 class App extends React.PureComponent {
   onDragEnd = (result) => {
     console.log('!!!!!!!onDragEnd', result);
+    const { source, destination } = result;
+    const { moveTask } = this.props;
+    moveTask({ source, destination });
   }
 
   render() {
     const { t, tasks } = this.props;
-    const tasksInWork = tasks.filter((task) => task.status === 'inwork');
-    const tasksChecking = tasks.filter((task) => task.status === 'checking');
-    const tasksDone = tasks.filter((task) => task.status === 'done');
+    const tasksInWork = tasks.inwork;
+    const tasksChecking = tasks.checking;
+    const tasksDone = tasks.done;
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>
         <Panel panelTitle={t('titleinwork')} status="inwork" cards={tasksInWork} />
