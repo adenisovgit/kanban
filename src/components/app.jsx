@@ -11,7 +11,6 @@ const mapStateToProps = ({ tasks }) => ({ tasks });
 @withTranslation()
 class App extends React.PureComponent {
   onDragEnd = (result) => {
-    // console.log('!!!!!!!onDragEnd', result);
     const { source, destination } = result;
     if (!source || !destination) return;
 
