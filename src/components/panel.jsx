@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { Droppable } from 'react-beautiful-dnd';
 
 import AddTaskButton from './addtaskbutton';
 import TextForm from './textform';
@@ -15,13 +16,21 @@ const Panel = (props) => {
   return (
     <div className="panel">
       <div className="panel_title">{panelTitle}</div>
-      {cards.map((card) => (
-        <Card
-          key={card.id}
-          card={card}
-          updateTask={((task) => dispatch(tasksActions.updateTask(task)))}
-        />
-      ))}
+      <Droppable droppableId={panelTitle}>
+        {(provided) => (
+          <div ref={provided.innerRef} {...provided.droppableProps}>
+            {cards.map((card, index) => (
+              <Card
+                key={card.id}
+                card={card}
+                index={index}
+                updateTask={((task) => dispatch(tasksActions.updateTask(task)))}
+              />
+            ))}
+            {provided.placeholder}
+          </div>
+        )}
+      </Droppable>
 
       {isAddingCard ? (
         <TextForm
