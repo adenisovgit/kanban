@@ -1,7 +1,7 @@
 {
   "name": "kanban",
-  "version": "0.0.1",
-  "description": "kanban table, test project for 4px.ru",
+  "version": "1.0.0",
+  "description": "kanban board, test project for 4px.ru",
   "main": "dist/index.html",
   "bin": {},
   "scripts": {
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git@github.com:adenisovgit/kanban"
   },
-  "author": "Andrei Denisov",
+  "author": "Andrey Denisov",
   "license": "ISC",
   "homepage": "",
   "dependencies": {
