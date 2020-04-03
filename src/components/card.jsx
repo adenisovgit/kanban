@@ -23,14 +23,22 @@ const Card = (props) => {
     setModalOpen(true);
   };
 
+  const getItemStyle = (isDragging, draggableStyle) => (
+    { ...draggableStyle, background: isDragging ? '#C7F1FF' : '#FFFFFF' }
+  );
+
   return (
     <>
       <Draggable draggableId={card.id} index={index}>
-        {(provided) => (
+        {(provided, snapshot) => (
           <div
             {...provided.draggableProps}
             {...provided.dragHandleProps}
             ref={provided.innerRef}
+            style={getItemStyle(
+              snapshot.isDragging,
+              provided.draggableProps.style,
+            )}
           >
             <div
               role="textbox"
