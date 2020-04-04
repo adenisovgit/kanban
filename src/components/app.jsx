@@ -12,8 +12,10 @@ const mapStateToProps = ({ tasks }) => ({ tasks });
 class App extends React.PureComponent {
   onDragEnd = (result) => {
     const { source, destination } = result;
-    if (!source || !destination) return;
-
+    if ((!source || !destination)
+      || (source.droppableId === destination.droppableId
+        && source.index === destination.index)) return;
+    console.log('*****onDragEnd\n', result);
     const { moveTask } = this.props;
     moveTask({ source, destination });
   }
