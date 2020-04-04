@@ -24,6 +24,7 @@
   max-height: 52px;
   overflow: hidden;
   text-overflow: ellipsis;
+  word-wrap: break-word;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
