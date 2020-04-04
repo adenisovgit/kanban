@@ -16,7 +16,7 @@ const Panel = (props) => {
   return (
     <div className="panel">
       <div className="panel_title">{panelTitle}</div>
-      <Droppable droppableId={panelTitle}>
+      <Droppable droppableId={status}>
         {(provided) => (
           <div ref={provided.innerRef} {...provided.droppableProps}>
             {cards.map((card, index) => (
@@ -24,7 +24,8 @@ const Panel = (props) => {
                 key={card.id}
                 card={card}
                 index={index}
-                updateTask={((task) => dispatch(tasksActions.updateTask(task)))}
+                status={status}
+                updateTaskData={((task) => dispatch(tasksActions.updateTaskData(task)))}
               />
             ))}
             {provided.placeholder}

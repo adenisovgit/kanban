@@ -5,7 +5,9 @@ import { Draggable } from 'react-beautiful-dnd';
 import Modal from './modal';
 
 const Card = (props) => {
-  const { card, updateTask, index } = props;
+  const {
+    card, updateTaskData, index, status,
+  } = props;
   const [isModalOpen, setModalOpen] = useState(false);
 
   const handleModalClose = (e) => {
@@ -42,7 +44,15 @@ const Card = (props) => {
           </div>
         )}
       </Draggable>
-      { isModalOpen && <Modal card={card} closeModal={handleModalClose} updateTask={updateTask} /> }
+      {isModalOpen && (
+        <Modal
+          card={card}
+          index={index}
+          status={status}
+          closeModal={handleModalClose}
+          updateTaskData={updateTaskData}
+        />
+      )}
     </>
 
   );

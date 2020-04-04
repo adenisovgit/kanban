@@ -12,14 +12,20 @@ const mapStateToProps = ({ tasks }) => ({ tasks });
 @withTranslation()
 class App extends React.PureComponent {
   onDragEnd = (result) => {
-    console.log('!!!!!!!onDragEnd', result);
+    const { source, destination } = result;
+    if ((!source || !destination)
+      || (source.droppableId === destination.droppableId
+        && source.index === destination.index)) return;
+    console.log('*****onDragEnd\n', result);
+    const { moveTask } = this.props;
+    moveTask({ source, destination });
   }
 
   render() {
     const { t, tasks } = this.props;
-    const tasksInWork = tasks.filter((task) => task.status === 'inwork');
-    const tasksChecking = tasks.filter((task) => task.status === 'checking');
-    const tasksDone = tasks.filter((task) => task.status === 'done');
+    const tasksInWork = tasks.inwork;
+    const tasksChecking = tasks.checking;
+    const tasksDone = tasks.done;
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>
         <Panel panelTitle={t('titleinwork')} status="inwork" cards={tasksInWork} />

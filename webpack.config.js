@@ -12,7 +12,7 @@ module.exports = () => {
       extensions: ['.js', '.jsx'],
     },
     output: {
-      path: `${__dirname}/dest`,
+      path: `${__dirname}/dist`,
     },
     module: {
       rules: [

@@ -7,12 +7,16 @@ import { useForm } from 'react-hook-form';
 
 const Modal = (props) => {
   const { t } = useTranslation();
-  const { closeModal, card, updateTask } = props;
+  const {
+    closeModal, card, updateTaskData, index, status,
+  } = props;
   const { register, handleSubmit } = useForm();
   const [isChangingTitle, setChangingTitle] = useState(false);
 
   const onSubmit = ({ title, body }) => {
-    updateTask({ ...card, title, body });
+    updateTaskData({
+      id: card.id, status, title, body, index,
+    });
     closeModal();
   };
 
