@@ -13,6 +13,9 @@ const Panel = (props) => {
   const { panelTitle, status, cards } = props;
   const [isAddingCard, setAddingCard] = useState(false);
 
+  const updateTaskData = (task) => dispatch(tasksActions.updateTaskData(task));
+  const setState = () => setAddingCard(true);
+
   return (
     <div className="panel">
       <div className="panel_title">{panelTitle}</div>
@@ -25,7 +28,7 @@ const Panel = (props) => {
                 card={card}
                 status={status}
                 index={index}
-                updateTaskData={((task) => dispatch(tasksActions.updateTaskData(task)))}
+                updateTaskData={updateTaskData}
               />
             ))}
             {provided.placeholder}
@@ -39,7 +42,7 @@ const Panel = (props) => {
           setState={() => setAddingCard(false)}
         />
       )
-        : <AddTaskButton setState={() => setAddingCard(true)} />}
+        : <AddTaskButton setState={setState} />}
     </div>
   );
 };
