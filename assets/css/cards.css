@@ -8,15 +8,14 @@
   padding: 8px 17px 8px 12px;
   border-radius: 2px;
   margin-bottom: 12px;
-  
-  font-family: 'Roboto', sans-serif;
+
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
   /* identical to box height */
   color: #212934;
-
 }
 
 .card_text {

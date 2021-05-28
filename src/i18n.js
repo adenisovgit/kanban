@@ -1,7 +1,7 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
 
-import resources from '../assets/locales/translation.json';
+import resources from "../assets/locales/translation.json";
 
 i18n
   // load translation using xhr -> see /public/locales
@@ -16,7 +16,7 @@ i18n
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
     resources,
-    lng: 'ru',
+    lng: "ru",
     debug: true,
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default

@@ -1,10 +1,10 @@
 /* eslint-disable no-param-reassign */
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
-import { uniqueId } from 'lodash';
+import { uniqueId } from "lodash";
 
 const tasksSlice = createSlice({
-  name: 'tasks',
+  name: "tasks",
   initialState: {
     inwork: [],
     checking: [],
@@ -14,20 +14,22 @@ const tasksSlice = createSlice({
   // redux toolkit take care about immutability
   reducers: {
     addTask: (state, action) => {
-      const { payload: { status, title } } = action;
-      state[status].push({ id: uniqueId(), title, body: '' });
+      const {
+        payload: { status, title },
+      } = action;
+      state[status].push({ id: uniqueId(), title, body: "" });
     },
     updateTaskData: (state, action) => {
       const {
-        payload: {
-          status, title, body, index,
-        },
+        payload: { status, title, body, index },
       } = action;
       state[status][index].title = title;
       state[status][index].body = body;
     },
     moveTask: (state, action) => {
-      const { payload: { source, destination } } = action;
+      const {
+        payload: { source, destination },
+      } = action;
       const card = state[source.droppableId][source.index];
       state[source.droppableId].splice([source.index], 1);
       state[destination.droppableId].splice([destination.index], 0, card);

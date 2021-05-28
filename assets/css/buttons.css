@@ -13,13 +13,13 @@ button {
 }
 
 .button_grey:hover {
-  background: #C4C4C4;
+  background: #c4c4c4;
   border-radius: 3px;
 }
 
 .button_grey:focus {
-  outline:none;
-  box-shadow:none;
+  outline: none;
+  box-shadow: none;
 }
 
 .button_cancel {
@@ -32,7 +32,7 @@ button {
   width: 205px;
   height: 18px;
   padding-left: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -54,14 +54,14 @@ button {
   padding-left: 10px;
   padding-right: 10px;
   height: 32px;
-  background: #0C7CD5;
+  background: #0c7cd5;
   border-radius: 3px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .button_blue:hover {
@@ -69,8 +69,8 @@ button {
 }
 
 .button_blue:focus {
-  outline:none;
-  box-shadow:none;
+  outline: none;
+  box-shadow: none;
 }
 
 .button_cancel_modal {

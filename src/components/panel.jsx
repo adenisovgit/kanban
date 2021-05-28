@@ -7,7 +7,6 @@ import TextForm from './textform';
 import { actions as tasksActions } from '../features/tasksSlice';
 import Card from './card';
 
-
 const Panel = (props) => {
   const dispatch = useDispatch();
   const { panelTitle, status, cards } = props;
@@ -41,8 +40,9 @@ const Panel = (props) => {
           handleAddCard={(title) => dispatch(tasksActions.addTask({ title, status }))}
           setState={() => setAddingCard(false)}
         />
-      )
-        : <AddTaskButton setState={setState} />}
+      ) : (
+        <AddTaskButton setState={setState} />
+      )}
     </div>
   );
 };

@@ -1,9 +1,9 @@
-import React from 'react';
-import { withTranslation } from 'react-i18next';
-import { DragDropContext } from 'react-beautiful-dnd';
+import React from "react";
+import { withTranslation } from "react-i18next";
+import { DragDropContext } from "react-beautiful-dnd";
 
-import connect from '../connect';
-import Panel from './panel';
+import connect from "../connect";
+import Panel from "./panel";
 
 const mapStateToProps = ({ tasks }) => ({ tasks });
 
@@ -12,13 +12,17 @@ const mapStateToProps = ({ tasks }) => ({ tasks });
 class App extends React.PureComponent {
   onDragEnd = (result) => {
     const { source, destination } = result;
-    if ((!source || !destination)
-      || (source.droppableId === destination.droppableId
-        && source.index === destination.index)) return;
-    console.log('*****onDragEnd\n', result);
+    if (
+      !source ||
+      !destination ||
+      (source.droppableId === destination.droppableId &&
+        source.index === destination.index)
+    )
+      return;
+    console.log("*****onDragEnd\n", result);
     const { moveTask } = this.props;
     moveTask({ source, destination });
-  }
+  };
 
   render() {
     const { t, tasks } = this.props;
@@ -27,9 +31,17 @@ class App extends React.PureComponent {
     const tasksDone = tasks.done;
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>
-        <Panel panelTitle={t('titleinwork')} status="inwork" cards={tasksInWork} />
-        <Panel panelTitle={t('titlecheсking')} status="checking" cards={tasksChecking} />
-        <Panel panelTitle={t('titledone')} status="done" cards={tasksDone} />
+        <Panel
+          panelTitle={t("titleinwork")}
+          status="inwork"
+          cards={tasksInWork}
+        />
+        <Panel
+          panelTitle={t("titlecheсking")}
+          status="checking"
+          cards={tasksChecking}
+        />
+        <Panel panelTitle={t("titledone")} status="done" cards={tasksDone} />
       </DragDropContext>
     );
   }

@@ -1,21 +1,28 @@
-body, h1, h2, h3, h4, p, a {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+a {
   margin: 0;
-  font-size: 100%; font-weight: normal;
+  font-size: 100%;
+  font-weight: normal;
 }
 
-* { 
+* {
   box-sizing: border-box;
 }
 
 .body {
-  background: #1D8B77;
+  background: #1d8b77;
   padding-top: 36px;
   padding-left: 24px;
 }
 
 .table {
   display: flex;
-  background: #1D8B77;
+  background: #1d8b77;
 }
 
 .page_mask {
